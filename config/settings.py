@@ -96,7 +96,7 @@ DATABASES = {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
         'NAME': "cinema",
         'USER': "postgres",
-        'PASSWORD': "2511",
+        'PASSWORD': "coniformx",
         'HOST': "localhost",
         'PORT': "5432"
     }

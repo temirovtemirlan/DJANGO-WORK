@@ -1,6 +1,6 @@
 from django.db import models
-from ..hall import models as Hall
-from ..movie import models as Movie
+from ..hall.models import Hall
+from ..movie.models import Movie
 """
 movie (Фильм): Связь с моделью Movie — какой фильм показывают на этом сеансе.
 hall (Зал): Связь с моделью Hall — в каком зале проходит сеанс.
@@ -9,6 +9,7 @@ end_time (Время окончания): Автоматически рассч�
 available_seats (Доступные места): Количество оставшихся свободных мест для бронирования.
 
 """
+
 
 class Sessions(models.Model):
     movie = models.ManyToManyField(Movie, "Фильм")
