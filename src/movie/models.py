@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.timezone import now
 
 class Genre(models.Model):
     title = models.CharField("Название жанра", max_length=100)
@@ -12,7 +11,7 @@ class Genre(models.Model):
         return self.title   
 
 class Movie(models.Model):
-    # created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField('Название', max_length=100, blank=False, null=False)
     description = models.CharField('Описание', max_length=100, blank=False, null=False)

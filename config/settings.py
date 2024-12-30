@@ -36,7 +36,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    # djanzmin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'src.movie',
-    'src.hall'
+    'src.hall',
+    'src.period'
 ]
 
 MIDDLEWARE = [
@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "cinema",
+        'NAME': "megamovie",
         'USER': "postgres",
         'PASSWORD': "2511",
         'HOST': "localhost",
