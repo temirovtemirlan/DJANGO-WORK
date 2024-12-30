@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 
+
 class Genre(models.Model):
     title = models.CharField("Название жанра", max_length=100)
 
@@ -9,7 +10,8 @@ class Genre(models.Model):
         verbose_name_plural = "жанры"
 
     def __str__(self):
-        return self.title   
+        return self.title
+
 
 class Movie(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
