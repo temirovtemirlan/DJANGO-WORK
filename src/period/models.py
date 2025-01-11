@@ -18,6 +18,7 @@ class Sessions(models.Model):
     start_time = models.CharField("Время начала", max_length=50, blank=False, null=False)
     end_time = models.CharField("Время окончания ", max_length=50, blank=False, null=False)
     available_seats = models.IntegerField("Доступные места", blank=False, null=False)
+    price = models.IntegerField('Цена', blank=False, null=False)
 
     def __str__(self):
         return f"{self.start_time} – {self.end_time}"

@@ -8,7 +8,7 @@ class Genre(models.Model):
         verbose_name_plural = "жанры"
 
     def __str__(self):
-        return self.title   
+        return self.title
 
 class Movie(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)

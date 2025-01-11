@@ -1,7 +1,15 @@
 from rest_framework import serializers
-from .models import Movie
+from .models import Movie, Genre
+
+
+class GenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Genre
+        fields = ("id","title")
 
 class MovieSerializer(serializers.ModelSerializer):
+
+    genre = GenreSerializer(many=True) # может быть много значений если manyToMany то должен быть many
 
     class Meta:
         model = Movie
