@@ -13,8 +13,8 @@ available_seats (Доступные места): Количество остав
 """
 
 class Sessions(models.Model):
-    movie = models.ManyToManyField(Movie, "Фильм")
-    hall = models.ManyToManyField(Hall, "Зал")
+    movie = models.ManyToManyField(Movie, verbose_name="Фильм")
+    hall = models.OneToOneField(Hall, verbose_name="Зал", on_delete=models.CASCADE)
     start_time = models.CharField("Время начала", max_length=50, blank=False, null=False)
     end_time = models.CharField("Время окончания ", max_length=50, blank=False, null=False)
     available_seats = models.IntegerField("Доступные места", blank=False, null=False)

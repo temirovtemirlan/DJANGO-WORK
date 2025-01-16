@@ -26,10 +26,11 @@ SECRET_KEY = 'django-insecure-8!*k*15@l%4abc&5yd!45y@+_@v@=ar74t-aqn!ye^%1t-!@8z
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "http://localhost:4000",
-    "http://127.0.0.1:5000",
-    'localhost',
-    '127.0.0.1'
+    # "http://localhost:4000",
+    # "http://127.0.0.1:5000",
+    # 'localhost',
+    # '127.0.0.1'
+    "*"
 ]
 
 # Application definition
@@ -45,7 +46,9 @@ INSTALLED_APPS = [
     'django_filters',
     'src.movie',
     'src.hall',
-    'src.period'
+    'src.period',
+    'src.custom_user',
+    'src.booking'
 ]
 
 REST_FRAMEWORK = {
@@ -77,6 +80,8 @@ CORS_ALLOWED_ORIGINS = [
 # главный url
 ROOT_URLCONF = 'config.urls'
 
+AUTH_USER_MODEL = 'custom_user.CustomUser'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -102,7 +107,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "megamovie",
+        'NAME': "alphamovie",
         'USER': "postgres",
         'PASSWORD': "2511",
         'HOST': "localhost",
